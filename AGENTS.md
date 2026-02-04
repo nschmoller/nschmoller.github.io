@@ -8,25 +8,24 @@
 npm install
 ```
 
-2. Start the dev server (BrowserSync):
+2. Start the dev server (Vite):
 
 ```bash
-npx gulp dev
+npm run dev
 ```
 
-Run `npx gulp dev` in a separate terminal and keep it running.
+Run `npm run dev` in a separate terminal and keep it running.
 
 ## Build assets
 
 ```bash
-npx gulp build
+npm run build
 ```
 
-If you only need specific steps:
+If you need a local preview of the production build:
 
 ```bash
-npx gulp css
-npx gulp js
+npm run preview
 ```
 
 ## Verify with DevTools MCP
@@ -34,15 +33,15 @@ npx gulp js
 1. Start the dev server (always use the dev server for MCP verification):
 
 ```bash
-npx gulp dev
+npm run dev
 ```
 
-Keep `npx gulp dev` running in a separate terminal while verifying.
+Keep `npm run dev` running in a separate terminal while verifying.
 
 2. Use the DevTools MCP to open and validate the page:
 
 ```bash
-open http://localhost:3000
+open http://localhost:5173
 ```
 
 3. In the DevTools MCP session, take a snapshot and confirm key sections render
@@ -52,5 +51,5 @@ open http://localhost:3000
 ## Notes
 
 - This is a static site. Main entry is `index.html`.
-- Gulp tasks are defined in `gulpfile.js`.
+- Vite handles dev/build tasks.
 - When offering choices to the user, number each option (1, 2, 3, ...).
