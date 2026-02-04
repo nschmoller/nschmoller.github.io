@@ -11,17 +11,43 @@ npm install
 2. Start the dev server (BrowserSync):
 
 ```bash
-gulp dev
+npx gulp dev
 ```
 
-Run `gulp dev` in a separate terminal and keep it running.
+Run `npx gulp dev` in a separate terminal and keep it running.
 
 ## Build assets
 
 ```bash
-gulp css
-gulp js
+npx gulp build
 ```
+
+If you only need specific steps:
+
+```bash
+npx gulp css
+npx gulp js
+```
+
+## Verify with DevTools MCP
+
+1. Start the dev server (always use the dev server for MCP verification):
+
+```bash
+npx gulp dev
+```
+
+Keep `npx gulp dev` running in a separate terminal while verifying.
+
+2. Use the DevTools MCP to open and validate the page:
+
+```bash
+open http://localhost:3000
+```
+
+3. In the DevTools MCP session, take a snapshot and confirm key sections render
+	(masthead, specialisaties, ervaring, contact, footer) and no console errors appear.
+
 
 ## Notes
 
