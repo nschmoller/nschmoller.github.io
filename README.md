@@ -26,22 +26,39 @@ To begin using this template, choose one of the following options to get started
 
 ## Usage
 
-### Basic Usage
+### Local development (Vite)
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+Install dependencies:
 
-### Advanced Usage
+```bash
+npm install
+```
 
-After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+Start the dev server:
 
-#### Gulp Tasks
+```bash
+npm run dev
+```
 
-- `gulp` the default task that builds everything
-- `gulp dev` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp sass` compiles SCSS files into CSS
-- `gulp minify-css` minifies the compiled CSS file
-- `gulp minify-js` minifies the themes JS file
-- `gulp copy` copies dependencies from node_modules to the vendor directory
+### Build
+
+Create a production build (output in `dist/`):
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+### Project structure notes
+
+- Source styles live in `scss/` and are bundled via Vite.
+- The JS entry is `src/main.js`, which imports `js/agency.js`.
+- Static assets for deployment live in `public/` (including `.nojekyll`).
 
 ## Bugs and Issues
 
