@@ -53,3 +53,4 @@ open http://localhost:3000
 
 - This is a static site. Main entry is `index.html`.
 - Gulp tasks are defined in `gulpfile.js`.
+- When offering choices to the user, number each option (1, 2, 3, ...).
