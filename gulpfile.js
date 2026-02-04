@@ -26,22 +26,7 @@ function vendorBootstrap() {
     .pipe(gulp.dest('./vendor/bootstrap'));
 }
 
-function vendorJquery() {
-  return gulp.src([
-      './node_modules/jquery/dist/*',
-      '!./node_modules/jquery/dist/core.js'
-    ])
-    .pipe(gulp.dest('./vendor/jquery'));
-}
-
-function vendorJqueryEasing() {
-  return gulp.src([
-      './node_modules/jquery.easing/*.js'
-    ])
-    .pipe(gulp.dest('./vendor/jquery-easing'));
-}
-
-var vendor = gulp.parallel(vendorBootstrap, vendorJquery, vendorJqueryEasing);
+var vendor = gulp.parallel(vendorBootstrap);
 
 // Compile SCSS
 function cssCompile() {
@@ -110,7 +95,7 @@ function browserSyncReload(done) {
 // Dev task
 function dev() {
   gulp.watch('./scss/*.scss', css);
-  gulp.watch('./js/*.js', js);
+  gulp.watch(['./js/*.js', '!./js/*.min.js'], js);
   gulp.watch('./*.html', browserSyncReload);
 }
 
