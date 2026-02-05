@@ -10,6 +10,11 @@ section#contact {
   .section-heading {
     color: $white;
   }
+  .section-subheading,
+  .section-subheading.text-muted {
+    color: $white;
+    opacity: 0.9;
+  }
   .form-group {
     margin-bottom: 25px;
     input,

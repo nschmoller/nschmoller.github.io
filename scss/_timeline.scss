@@ -95,7 +95,7 @@
       text-align: left;
       &:before {
         right: auto;
-        left: -15px;
+        // left: -15px;
         border-right-width: 15px;
         border-left-width: 0;
       }
@@ -108,6 +108,30 @@
     }
     &:last-child {
       margin-bottom: 0;
+    }
+    &.timeline-muted {
+      margin-bottom: 30px;
+      .timeline-panel {
+        opacity: 0.75;
+      }
+      .timeline-image {
+        opacity: 0.7;
+        transform: scale(0.85);
+      }
+    }
+    .timeline-panel-wide {
+      position: relative;
+      float: none;
+      clear: both;
+      width: 100%;
+      max-width: 1120px;
+      margin: 160px auto 0;
+      padding: 0 20px;
+      text-align: left;
+      &:before,
+      &:after {
+        display: none;
+      }
     }
   }
   .timeline-heading {
@@ -124,6 +148,148 @@
     > p {
       margin-bottom: 0;
     }
+  }
+  .timeline-case-study {
+    margin-top: 16px;
+    padding: 14px;
+    border: 1px solid $gray-200;
+    border-radius: 8px;
+    background-color: $gray-100;
+    h5 {
+      margin: 0 0 12px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  }
+  .case-study-feature {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: 1fr;
+  }
+  .case-study-media {
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+  }
+  .case-study-content {
+    .case-study-eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: $gray-600;
+      margin-bottom: 8px;
+    }
+    h5 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .case-study-intro {
+      margin: 0 0 14px;
+      font-size: 15px;
+    }
+  }
+  .case-study-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 8px;
+    li {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+  .timeline-compact {
+    margin-bottom: 36px;
+    .timeline-panel {
+      float: right;
+      width: 100%;
+      padding: 0 20px 0 100px;
+      text-align: left;
+      background: transparent;
+      position: relative;
+      &:after {
+        display: none;
+      }
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 22px;
+        left: 41px;
+        width: 59px;
+        height: 2px;
+        background: $gray-200;
+      }
+    }
+  }
+  .timeline-image-compact {
+    display: none;
+  }
+  .timeline-dot {
+    display: none;
+  }
+  .timeline-compact .experience-card {
+    display: grid;
+    gap: 10px;
+    padding: 14px 16px;
+    border: 1px solid $gray-200;
+    border-radius: 14px;
+    background: $white;
+    box-shadow: 0 12px 24px rgba(19, 25, 40, 0.08);
+    position: relative;
+  }
+  .experience-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba($gray-200, 0.6);
+  }
+  .experience-card-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+  .experience-logo {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: $white;
+    border: 1px solid $gray-200;
+    padding: 2px;
+  }
+  .experience-year {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $gray-600;
+  }
+  .experience-role {
+    font-size: 13px;
+    font-weight: 700;
+    color: $gray-800;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .experience-company {
+    font-size: 14px;
+    font-weight: 700;
+    color: $gray-800;
+  }
+  .experience-summary {
+    margin: 0;
+    font-size: 13px;
+    color: $gray-700;
   }
 }
 @media(min-width:768px) {
@@ -156,6 +322,55 @@
         padding: 0 30px 20px 20px;
         text-align: left;
       }
+      &.timeline-muted {
+        margin-bottom: 60px;
+        min-height: 80px;
+      }
+      .timeline-panel-wide {
+        width: calc(100% - 60px);
+        max-width: 1120px;
+        margin: 200px auto 0;
+        padding: 0 40px 10px;
+      }
+    }
+    .case-study-feature {
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      align-items: start;
+    }
+    .case-study-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .timeline-compact {
+      margin-bottom: -50px;
+      min-height: 90px;
+      .timeline-panel {
+        float: left;
+        width: 50%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+        &:before {
+          top: 24px;
+          left: auto;
+          right: 0;
+          width: calc(59% - 41% + 30px);
+        }
+      }
+      &.timeline-inverted > .timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+        &:before {
+          left: 0;
+          right: auto;
+          width: calc(59% - 41% + 30px);
+        }
+      }
+    }
+    .timeline-image-compact {
+      left: 50%;
+      width: 28px;
+      height: 28px;
+      margin-left: -14px;
     }
   }
 }
@@ -165,6 +380,10 @@
       min-height: 150px;
       .timeline-panel {
         padding: 0 20px 20px;
+      }
+      .timeline-panel-wide {
+        max-width: 1200px;
+        padding: 0 60px 12px;
       }
       .timeline-image {
         width: 150px;
@@ -188,6 +407,10 @@
       min-height: 170px;
       .timeline-panel {
         padding: 0 20px 20px 100px;
+      }
+      .timeline-panel-wide {
+        max-width: 1200px;
+        padding: 0 60px 12px;
       }
       .timeline-image {
         width: 170px;

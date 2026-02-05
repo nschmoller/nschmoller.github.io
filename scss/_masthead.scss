@@ -11,7 +11,7 @@ header.masthead {
     url('../img/header.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center center;
+  background-position: center top;
   @include background-cover;
   .intro-text {
     padding-top: 150px;
@@ -44,12 +44,23 @@ header.masthead {
         margin-bottom: 25px;
         @include serif-font;
       }
+      .intro-subheading {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        margin-bottom: 0;
+        @include heading-font;
+      }
       .intro-heading {
         font-size: 75px;
         font-weight: 700;
         line-height: 75px;
         margin-bottom: 50px;
         @include heading-font;
+      }
+      .intro-subheading {
+        font-size: 22px;
+        letter-spacing: 0.1em;
       }
     }
   }

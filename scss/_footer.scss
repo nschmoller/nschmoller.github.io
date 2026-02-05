@@ -25,21 +25,29 @@ ul.social-buttons {
   li {
     a {
       font-size: 20px;
-      line-height: 40px;
-      display: block;
-      width: 40px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       height: 40px;
+      padding: 0 14px;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
       color: white;
-      border-radius: 100%;
+      border-radius: 999px;
       outline: none;
       background-color: $gray-900;
       &:active,
       &:focus,
       &:hover {
         background-color: $primary;
+      }
+      .social-label {
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        @include heading-font;
       }
     }
   }

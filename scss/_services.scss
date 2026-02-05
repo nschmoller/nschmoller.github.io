@@ -3,3 +3,18 @@
   margin: 15px 0;
   text-transform: none;
 }
+
+.service-item {
+  margin-bottom: 30px;
+}
+
+.service-bullets {
+  max-width: 320px;
+  margin: 0 auto;
+  padding-left: 1.2rem;
+  text-align: left;
+  line-height: 1.6;
+  li {
+    margin-bottom: 0.4rem;
+  }
+}

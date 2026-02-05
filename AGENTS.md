@@ -53,3 +53,5 @@ open http://localhost:5173
 - This is a static site. Main entry is `index.html`.
 - Vite handles dev/build tasks.
 - When offering choices to the user, number each option (1, 2, 3, ...).
+- Always check every change in the DevTools MCP server and verify the changes work and the layout looks good before finishing a task.
+- Everything has to look professional so use the screenshot tool to make sure everything looks correct.
