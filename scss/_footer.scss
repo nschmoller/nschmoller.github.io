@@ -1,10 +1,15 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+$border-navy: #c5d3e8;
+
 // Styling for the footer
 footer {
-  padding: 25px 0;
+  padding: 40px 0;
+  background-color: #f1f5f9;
+  border-top: 1px solid $border-navy;
   text-align: center;
+
   span.copyright {
     font-size: 90%;
     line-height: 40px;
@@ -17,6 +22,29 @@ footer {
     margin-bottom: 0;
     text-transform: none;
     @include heading-font;
+  }
+}
+
+// Footer logo
+.footer-logo {
+  display: block;
+  margin-bottom: 8px;
+  img {
+    height: 56px;
+    width: auto;
+    display: inline-block;
+  }
+}
+
+// Footer contact info
+.footer-contact {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #4b5563;
+  @include heading-font;
+  a {
+    color: #4b5563;
+    &:hover { color: $primary; }
   }
 }
 
@@ -37,11 +65,12 @@ ul.social-buttons {
       color: white;
       border-radius: 999px;
       outline: none;
-      background-color: $gray-900;
+      background-color: $navy-dark;
       &:active,
       &:focus,
       &:hover {
         background-color: $primary;
+        color: $navy-dark;
       }
       .social-label {
         font-size: 12px;
@@ -52,3 +81,4 @@ ul.social-buttons {
     }
   }
 }
+

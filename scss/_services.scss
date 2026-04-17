@@ -1,20 +1,101 @@
-// Styling for the services section
-.service-heading {
-  margin: 15px 0;
-  text-transform: none;
+@use "sass:color";
+@use "variables" as *;
+
+.services {
+  background: #f8fafc;
 }
 
-.service-item {
-  margin-bottom: 30px;
+.divider {
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: $primary;
+  margin: 14px auto 40px;
+  border-radius: 2px;
 }
 
-.service-bullets {
-  max-width: 320px;
-  margin: 0 auto;
-  padding-left: 1.2rem;
-  text-align: left;
-  line-height: 1.6;
-  li {
-    margin-bottom: 0.4rem;
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  text-align: center;
+}
+@media(min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
   }
+}
+@media(min-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+.service-card {
+  padding: 36px 28px;
+  background: #fff;
+  border: 1px solid #c5d3e8;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba($navy-dark, 0.05);
+}
+
+.service-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: $navy-dark;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 1.5px solid rgba($primary, 0.25);
+  }
+
+  i {
+    font-size: 20px;
+    color: $primary;
+  }
+}
+
+.service-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: $navy-dark;
+}
+
+.service-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba($primary, 0.08);
+  color: color.adjust($primary, $lightness: -10%);
+  border: 1px solid rgba($primary, 0.2);
 }

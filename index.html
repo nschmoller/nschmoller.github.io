@@ -18,10 +18,7 @@
     <title>Niek Schmoller - Agile Developer</title>
 
     <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="/src/main.js" rel="modulepreload">
@@ -40,7 +37,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Niek Schmoller</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+          <img src="img/logos/logo-schmoller-hero.svg" alt="Schmoller — Agile Development" class="navbar-logo">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -62,183 +61,188 @@
 
     <!-- Header -->
     <header class="masthead">
-      <div class="overlay"></div>
       <div class="container">
-        <div class="intro-text">
-          <div class="intro-lead-in">Niek Schmoller</div>
-          <h1 class="intro-heading text-uppercase">Agile Developer</h1>
-          <h2 class="intro-subheading text-uppercase">Freelance software developer</h2>
+        <div class="masthead-inner">
+          <div class="masthead-content">
+            <img src="img/logos/logo-schmoller-hero.svg" alt="Schmoller — Agile Development" class="masthead-logo">
+            <h1 class="masthead-name">Niek Schmoller</h1>
+            <p class="masthead-sub">Freelance software developer gespecialiseerd in AI, agile software development en schaalbare architectuur.</p>
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Neem contact op</a>
+          </div>
+          <div class="masthead-photo">
+            <div class="masthead-photo-frame">
+              <img src="img/header.jpg" alt="Niek Schmoller">
+            </div>
+            <div class="masthead-badge">
+              <div class="masthead-badge-years">18</div>
+              <div class="masthead-badge-label">jaar ervaring</div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
 
     <!-- Specialisaties -->
-    <section id="specialisaties">
+    <section id="specialisaties" class="services">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Specialisaties</h2>
+        <h2 class="section-heading text-center">Specialisaties</h2>
+        <span class="divider"></span>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon-wrap"><i class="fa-solid fa-robot"></i></div>
+            <h3 class="service-title">AI</h3>
+            <p class="service-text">Veel ervaring met het versnellen van software ontwikkeling d.m.v. AI zonder kwaliteit in te leveren, maar ook met de integratie van AI tooling in software.</p>
+            <div class="service-tags">
+              <span class="tag">Claude Code</span>
+              <span class="tag">Github Copilot</span>
+              <span class="tag">Spec-kit</span>
+              <span class="tag">AI-video</span>
+            </div>
           </div>
-        </div>
-        <div class="row text-center">
-          <div class="col-md-4 service-item">
-            <span class="fa-stack fa-4x">
-              <i class="fa-solid fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa-solid fa-terminal fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Software Developer</h4>
-            <ul class="service-bullets text-muted">
-              <li>PHP (Symfony and Laravel), Ruby on Rails en Javascript (React/Angular)</li>
-              <li>Agile ontwikkelmethoden, zoals unit tests, CI en domain-driven design</li>
-            </ul>
+          <div class="service-card">
+            <div class="service-icon-wrap"><i class="fa-solid fa-terminal"></i></div>
+            <h3 class="service-title">Software Developer</h3>
+            <p class="service-text">Ervaren in het bouwen van schaalbare webapplicaties met oog voor kwaliteit en onderhoudbaarheid.</p>
+            <div class="service-tags">
+              <span class="tag">Ruby on Rails</span>
+              <span class="tag">PHP</span>
+              <span class="tag">Symfony</span>
+              <span class="tag">Laravel</span>
+              <span class="tag">React</span>
+              <span class="tag">Angular</span>
+            </div>
           </div>
-          <div class="col-md-4 service-item">
-            <span class="fa-stack fa-4x">
-              <i class="fa-solid fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa-solid fa-users fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Scrum Master</h4>
-            <ul class="service-bullets text-muted">
-              <li>Door jarenlange ervaring weet ik een team snel productief te krijgen</li>
-              <li>Inzetbaar voor korte en lange projecten</li>
-              <li>Door het team centraal te stellen probeer ik het beste uit iedereen te halen</li>
-            </ul>
-          </div>
-          <div class="col-md-4 service-item">
-            <span class="fa-stack fa-4x">
-              <i class="fa-solid fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa-solid fa-gears fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Software Architect</h4>
-            <ul class="service-bullets text-muted">
-              <li>Als lead developer heb ik vaak nieuwe projecten gestart en daarbij ook de architectuurkeuzes gemaakt</li>
-              <li>Ontwerp voor schaalbaarheid en onderhoudbaarheid</li>
-              <li>Interesse voor nieuwe ontwikkelingen in dit vakgebied</li>
-            </ul>
+          <div class="service-card">
+            <div class="service-icon-wrap"><i class="fa-solid fa-gears"></i></div>
+            <h3 class="service-title">Software Architect</h3>
+            <p class="service-text">Architectuurbeslissingen nemen die schaalbaarheid en onderhoudbaarheid op de lange termijn borgen.</p>
+            <div class="service-tags">
+              <span class="tag">DDD</span>
+              <span class="tag">CQRS</span>
+              <span class="tag">Clean Architecture</span>
+              <span class="tag">Microservices</span>
+              <span class="tag">Docker</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Ervaring -->
-    <section id="ervaring">
+    <section id="ervaring" class="timeline-section">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Ervaring</h2>
+        <h2 class="section-heading text-center">Ervaring</h2>
+        <span class="divider"></span>
+
+        <!-- Featured: XIP / ThiemeMeulenhoff -->
+        <div class="tl-featured">
+          <div class="tl-featured-header">
+            <div class="tl-featured-brand">
+              <div class="tl-featured-logos">
+                <img src="img/logos/Logo_ThiemeMeulenhoff.png" alt="ThiemeMeulenhoff">
+              </div>
+              <div class="tl-featured-meta">
+                <div class="tl-featured-role">Freelance developer</div>
+                <div class="tl-featured-company">ThiemeMeulenhoff</div>
+              </div>
+            </div>
+            <div class="tl-featured-period">2021 – 2026</div>
+          </div>
+          <div class="tl-featured-body">
+            <div>
+              <span class="case-study-label">Case study</span>
+              <div class="case-study-title">Educatieve contentketen voor ThiemeMeulenhoff</div>
+              <p class="tl-featured-desc">Voor ThiemeMeulenhoff heb ik gewerkt aan een systeem om hun content te publiceren en in een digitale leeromgeving voor studenten weer te geven. Dezelfde content kan voor boeken, digitale leeromgevingen en andere kanalen worden gebruikt.</p>
+              <div class="tl-featured-tags">
+                <span class="tag">PHP</span>
+                <span class="tag">Symfony</span>
+                <span class="tag">Angular</span>
+                <span class="tag">XSLT</span>
+              </div>
+            </div>
+            <div class="tl-featured-img">
+              <img src="img/edition.png" alt="Educatieve contentketen screenshot">
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="timeline">
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <div class="timeline-logo-pair">
-                    <img class="img-fluid" src="img/logos/xip.jpg" alt="XIP">
-                    <img class="img-fluid" src="img/logos/Logo_ThiemeMeulenhoff.png" alt="ThiemeMeulenhoff">
-                  </div>
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>2021-2026</h4>
-                    <h4 class="subheading">XIP / ThiemeMeulenhoff</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Freelance software developer</p>
-                  </div>
-                </div>
-                <div class="timeline-panel-wide">
-                  <div class="timeline-body">
-                    <div class="timeline-case-study case-study-feature">
-                      <div class="case-study-media">
-                        <img src="img/edition.png" alt="Voorbeeldscherm van de editie-omgeving">
-                      </div>
-                      <div class="case-study-content">
-                        <h5>Educatieve contentketen voor ThiemeMeulenhoff</h5>
-                        <p class="case-study-intro">In opdracht van XIP heb ik voor ThiemeMeulenhoff gewerkt aan een systeem om hun content te publiceren en in een digitale leeromgeving voor studenten weer te geven.</p>
-                        <ul class="case-study-list">
-                          <li>Een publicatieproces waarbij de content wordt omgezet naar een structuur die geschikt is voor de backend API.</li>
-                          <li>De frontend is gebouwd met Angular en zorgt voor een gebruiksvriendelijke presentatie van de content.</li>
-                          <li>Resultaat: dezelfde content kan voor boeken, digitale leeromgevingen en andere kanalen worden gebruikt.</li>
-                          <li>Stack: PHP, Angular, XSLT, Docker.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid timeline-logo-single" src="img/logos/ucare4.png" alt="UCare4">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>2020-2021</h4>
-                    <h4 class="subheading">UCare4</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Freelance software developer. PHP.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/logos/thuisbezorgdnl-logo-wit.png" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>2018-2019</h4>
-                    <h4 class="subheading">Takeaway.com</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Freelance Software Developer. PHP, Laravel.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-compact">
-                <div class="timeline-panel">
-                  <div class="experience-card">
-                    <div class="experience-card-header">
-                      <div class="experience-card-brand">
-                        <img class="experience-logo" src="img/logos/n&c.png" alt="Nerds & Company">
-                        <div class="experience-company">Nerds &amp; Company</div>
-                      </div>
-                      <span class="experience-year">2015-2018</span>
-                    </div>
-                    <p class="experience-summary">Senior Associate, Lead Developer en Scrum Master. Applicaties voor Unit4, Profile en Domijn in PHP en Ruby on Rails.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-compact timeline-inverted">
-                <div class="timeline-panel">
-                  <div class="experience-card">
-                    <div class="experience-card-header">
-                      <div class="experience-card-brand">
-                        <img class="experience-logo" src="img/logos/beanmachine.png" alt="The Bean Machine">
-                        <div class="experience-company">The Bean Machine</div>
-                      </div>
-                      <span class="experience-year">2011-2015</span>
-                    </div>
-                    <p class="experience-summary">Lead Developer en Scrum Master. Maatwerksoftware met nadruk op usability voor zorg en semi-overheid.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-compact">
-                <div class="timeline-panel">
-                  <div class="experience-card">
-                    <div class="experience-card-header">
-                      <div class="experience-card-brand">
-                        <img class="experience-logo" src="img/logos/TSI_logo.jpg" alt="TSi Solutions">
-                        <div class="experience-company">TSi Solutions (nu Qenner)</div>
-                      </div>
-                      <span class="experience-year">2007-2011</span>
-                    </div>
-                    <p class="experience-summary">Back-end developer en Scrum Master. Nieuw CMS voor reiswebsites.</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
+
+        <!-- Compact grid: earlier experience -->
+        <div class="tl-grid-label">Eerdere ervaring</div>
+        <div class="tl-grid">
+
+          <div class="tl-card">
+            <div class="tl-card-logo">
+              <img src="img/logos/ucare4.png" alt="UCare4">
+            </div>
+            <div class="tl-card-body">
+              <div class="tl-card-year">2020 – 2021</div>
+              <div class="tl-card-role">Freelance Developer</div>
+              <div class="tl-card-company">UCare4</div>
+              <div class="tl-featured-tags">
+                <span class="tag">PHP</span>
+              </div>
+            </div>
           </div>
+
+          <div class="tl-card">
+            <div class="tl-card-logo">
+              <img src="img/logos/thuisbezorgdnl-logo-wit.png" alt="Takeaway.com" style="background:#e5251a;border-radius:4px;padding:2px">
+            </div>
+            <div class="tl-card-body">
+              <div class="tl-card-year">2018 – 2019</div>
+              <div class="tl-card-role">Freelance Developer</div>
+              <div class="tl-card-company">Takeaway.com</div>
+              <div class="tl-featured-tags">
+                <span class="tag">PHP</span>
+                <span class="tag">Laravel</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-card-logo">
+              <img src="img/logos/n&c.png" alt="Nerds &amp; Company">
+            </div>
+            <div class="tl-card-body">
+              <div class="tl-card-year">2015 – 2018</div>
+              <div class="tl-card-role">Lead Developer &amp; Scrum Master</div>
+              <div class="tl-card-company">Nerds &amp; Company</div>
+              <div class="tl-featured-tags">
+                <span class="tag">Ruby on Rails</span>
+                <span class="tag">PHP</span>
+                <span class="tag">Angular</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-card-logo">
+              <img src="img/logos/beanmachine.png" alt="The Bean Machine">
+            </div>
+            <div class="tl-card-body">
+              <div class="tl-card-year">2011 – 2015</div>
+              <div class="tl-card-role">Lead Developer &amp; Scrum Master</div>
+              <div class="tl-card-company">The Bean Machine</div>
+              <div class="tl-featured-tags">
+                <span class="tag">Ruby on Rails</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-card-logo">
+              <img src="img/logos/TSI_logo.jpg" alt="TSi Solutions">
+            </div>
+            <div class="tl-card-body">
+              <div class="tl-card-year">2007 – 2011</div>
+              <div class="tl-card-role">Back-end Developer</div>
+              <div class="tl-card-company">TSi Solutions (nu Qenner)</div>
+              <div class="tl-featured-tags">
+                <span class="tag">PHP</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -292,16 +296,19 @@
     <!-- Footer -->
     <footer>
       <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-6 text-right">E-mail:</div>
-              <div class="col-6 text-left"><a href="mailto:info@schmoller.nl">info@schmoller.nl</a></div>
-              <div class="col-6 text-right">Telefoon:</div>
-              <div class="col-6 text-left">0613383656</div>
+        <div class="row align-items-center">
+          <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+            <a href="#page-top" class="footer-logo js-scroll-trigger">
+              <img src="img/logos/logo-schmoller-light.svg" alt="Schmoller">
+            </a>
+          </div>
+          <div class="col-md-4 text-center mb-3 mb-md-0">
+            <div class="footer-contact">
+              <a href="mailto:info@schmoller.nl">info@schmoller.nl</a><br>
+              <a href="tel:0613383656">06 13 38 36 56</a>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 text-center text-md-end">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="https://www.linkedin.com/in/niekschmoller/" aria-label="LinkedIn">

@@ -1,67 +1,191 @@
+@use "variables" as *;
 @use "mixins" as *;
 
 // Styling for the masthead
 header.masthead {
-  text-align: center;
-  color: white;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
-    url('../img/header.jpg');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center top;
-  @include background-cover;
-  .intro-text {
-    padding-top: 150px;
-    padding-bottom: 100px;
-    .intro-lead-in {
-      font-size: 22px;
-      font-style: italic;
-      line-height: 22px;
-      margin-bottom: 25px;
-      @include serif-font;
-    }
-    .intro-heading {
-      font-size: 50px;
-      font-weight: 700;
-      line-height: 50px;
-      margin-bottom: 25px;
-      @include heading-font;
-    }
+  color: $text-on-dark;
+  background:
+    radial-gradient(ellipse at 18% 16%, rgba(29, 58, 95, 0.28) 0%, rgba(19, 40, 70, 0.10) 58%, transparent 100%),
+    radial-gradient(ellipse at 88% 84%, rgba(29, 53, 89, 0.22) 0%, rgba(20, 39, 65, 0.07) 62%, transparent 100%),
+    linear-gradient(135deg, $navy-mid 0%, $navy-dark 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0 100px;
+
+  // Corner bracket motif matching logo icon
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    opacity: 0.15;
+    pointer-events: none;
+  }
+  &::before {
+    top: 50px;
+    left: 50px;
+    border-top: 2px solid $primary;
+    border-left: 2px solid $primary;
+  }
+  &::after {
+    bottom: 50px;
+    right: 50px;
+    border-bottom: 2px solid $primary;
+    border-right: 2px solid $primary;
   }
 }
-@media(min-width:768px) {
+
+.masthead-inner {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.masthead-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.masthead-logo {
+  display: block;
+  width: 260px;
+  max-width: 100%;
+  margin-bottom: 20px;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+body.nav-scrolled .masthead-logo {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.92);
+  pointer-events: none;
+}
+
+.masthead-name {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  color: $text-on-dark;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  @include heading-font;
+}
+
+.masthead-sub {
+  font-size: 17px;
+  font-weight: 400;
+  color: rgba($text-on-dark, 0.7);
+  line-height: 1.6;
+  margin-bottom: 36px;
+  @include body-font;
+}
+
+// Photo column
+.masthead-photo {
+  flex-shrink: 0;
+  width: 340px;
+  position: relative;
+}
+
+.masthead-photo-frame {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  box-shadow:
+    0 0 0 1px rgba($primary, 0.2),
+    0 40px 80px rgba(0, 0, 0, 0.5);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    border: 2px solid rgba($primary, 0.3);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35%;
+    background: linear-gradient(to top, rgba($navy-dark, 0.45) 0%, transparent 100%);
+    pointer-events: none;
+  }
+}
+
+.masthead-badge {
+  position: absolute;
+  bottom: -16px;
+  left: -20px;
+  background: $navy-mid;
+  border: 1px solid rgba($primary, 0.3);
+  border-radius: 10px;
+  padding: 12px 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.masthead-badge-years {
+  font-size: 28px;
+  font-weight: 700;
+  color: $primary;
+  line-height: 1;
+  @include heading-font;
+}
+
+.masthead-badge-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba($text-on-dark, 0.6);
+  margin-top: 3px;
+  @include heading-font;
+}
+
+// Responsive
+@media(max-width: 991px) {
   header.masthead {
-    .intro-text {
-      padding-top: 300px;
-      padding-bottom: 200px;
-      .intro-lead-in {
-        font-size: 40px;
-        font-style: italic;
-        line-height: 40px;
-        margin-bottom: 25px;
-        @include serif-font;
-      }
-      .intro-subheading {
-        font-size: 18px;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        margin-bottom: 0;
-        @include heading-font;
-      }
-      .intro-heading {
-        font-size: 75px;
-        font-weight: 700;
-        line-height: 75px;
-        margin-bottom: 50px;
-        @include heading-font;
-      }
-      .intro-subheading {
-        font-size: 22px;
-        letter-spacing: 0.1em;
-      }
+    padding: 100px 0 80px;
+
+    &::before {
+      top: 85px;
+      left: 5px;
     }
+  }
+  .masthead-inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .masthead-photo {
+    width: 260px;
+    align-self: center;
+  }
+  .masthead-badge {
+    bottom: -12px;
+    left: -12px;
+  }
+}
+@media(max-width: 575px) {
+  .masthead-logo {
+    width: 200px;
+    margin-left: 60px;
+  }
+  .masthead-photo {
+    width: 220px;
   }
 }

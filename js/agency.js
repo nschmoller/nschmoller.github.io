@@ -9,8 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     if (window.scrollY > 100) {
       mainNav.classList.add("navbar-shrink");
+      document.body.classList.add("nav-scrolled");
     } else {
       mainNav.classList.remove("navbar-shrink");
+      document.body.classList.remove("nav-scrolled");
     }
   };
 
